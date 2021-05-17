@@ -1,0 +1,213 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.8f1 (507919d4fff5) revision 5273881'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.985; Version 2009; 64bit' Language: 'ko' Physical Memory: 16315 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.8f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/user/Documents/GitHub/BetweenTheWalls
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52294
+Successfully changed project path to: C:/Users/user/Documents/GitHub/BetweenTheWalls
+C:/Users/user/Documents/GitHub/BetweenTheWalls
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 33.19 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.8f1 (507919d4fff5)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/user/Documents/GitHub/BetweenTheWalls/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 SUPER (ID=0x2187)
+    Vendor:   
+    VRAM:     3955 MB
+    Driver:   27.21.14.5730
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56608
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002358 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 32.84 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.945 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001041 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 32.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.848 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1808 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.9 MB.
+System memory in use after: 84.9 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2251.
+Total: 1.809500 ms (FindLiveObjects: 0.180600 ms CreateObjectMapping: 0.057200 ms MarkObjects: 1.465500 ms  DeleteObjects: 0.105600 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Tilemap/Wall.asset
+  artifactKey: Guid(e6b44b60c112a36459a80febd67ef065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tilemap/Wall.asset using Guid(e6b44b60c112a36459a80febd67ef065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11a0ed08f40f96e96b7c69970f392d2c') in 0.067125 seconds
+  Import took 0.069796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Tilemap/Floor2.asset
+  artifactKey: Guid(b2870b7f57aa365469c1ae69866c2f1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tilemap/Floor2.asset using Guid(b2870b7f57aa365469c1ae69866c2f1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '152db26d31470cf1bbb256f356c548bc') in 0.008522 seconds
+  Import took 0.011451 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Tilemap/Safezone_floor.asset
+  artifactKey: Guid(4c422d2478772fe45aad6683f3731886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tilemap/Safezone_floor.asset using Guid(4c422d2478772fe45aad6683f3731886) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0152fb84b6fedd376daedda6af3f5be4') in 0.042794 seconds
+  Import took 0.052018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000395 seconds.
+  path: Assets/Tilemap/Floor.asset
+  artifactKey: Guid(f889a7d9acd77284187205bad1310e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tilemap/Floor.asset using Guid(f889a7d9acd77284187205bad1310e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1a1e25a2c8cfda46276b086498cf1f0') in 0.040099 seconds
+  Import took 0.047940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000387 seconds.
+  path: Assets/Tilemap/Wall of stop.asset
+  artifactKey: Guid(a63b3f49e15906343958cb216b5213fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tilemap/Wall of stop.asset using Guid(a63b3f49e15906343958cb216b5213fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f59535875ea4835cd19a0a0e2eaf983e') in 0.006420 seconds
+  Import took 0.012498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Tilemap/Tile Palette.prefab
+  artifactKey: Guid(957d164f4dd145741a5591d1cabcc936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tilemap/Tile Palette.prefab using Guid(957d164f4dd145741a5591d1cabcc936) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7de3bd9f34b786f0eb108ec2b9596a98') in 0.010879 seconds
+  Import took 0.013484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 32.476565 seconds.
+  path: Assets/Sprite/Floor.png
+  artifactKey: Guid(c32b447ae48385c4688c4099915dbf96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Floor.png using Guid(c32b447ae48385c4688c4099915dbf96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7cb2f985cf4f5df02581bc4cad04a8a') in 0.035770 seconds
+  Import took 0.039202 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Sprite/Safezone_floor.png
+  artifactKey: Guid(61e23fe008b97a14faa443cfece1a9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Safezone_floor.png using Guid(61e23fe008b97a14faa443cfece1a9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed3fa76c22c0c20b0aec1bd9f20b5406') in 0.008473 seconds
+  Import took 0.011443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Sprite/Wall.png
+  artifactKey: Guid(0e5c1ae977dad9c4bb7fd31df0e0322c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Wall.png using Guid(0e5c1ae977dad9c4bb7fd31df0e0322c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88827fa09ffb4a9ce26d168d3729086e') in 0.052103 seconds
+  Import took 0.060242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/Sprite/Wall of stop.png
+  artifactKey: Guid(4528b86b527ec9044b3089feea225729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Wall of stop.png using Guid(4528b86b527ec9044b3089feea225729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '921324c9f7ff076a7dbc06ad8cc4123d') in 0.033633 seconds
+  Import took 0.043909 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Sprite/Floor2.png
+  artifactKey: Guid(113d12c825610284c8085484a4394962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Floor2.png using Guid(113d12c825610284c8085484a4394962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1beb5f8d2054a103371007b671d718d4') in 0.012930 seconds
+  Import took 0.015476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.618570 seconds.
+  path: Assets/Sprite/Floor.png
+  artifactKey: Guid(c32b447ae48385c4688c4099915dbf96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Floor.png using Guid(c32b447ae48385c4688c4099915dbf96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fe652d8b2ad92b1849ce8f5f83d2b64') in 0.039558 seconds
+  Import took 0.048147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.612125 seconds.
+  path: Assets/Sprite/Floor2.png
+  artifactKey: Guid(113d12c825610284c8085484a4394962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Floor2.png using Guid(113d12c825610284c8085484a4394962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc0beaf304d53e3ab12f35d40560397c') in 0.044151 seconds
+  Import took 0.051157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.407371 seconds.
+  path: Assets/Sprite/Safezone_floor.png
+  artifactKey: Guid(61e23fe008b97a14faa443cfece1a9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Safezone_floor.png using Guid(61e23fe008b97a14faa443cfece1a9cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7620d82d8734867a74cf6aa253dddec') in 0.049177 seconds
+  Import took 0.052937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.223680 seconds.
+  path: Assets/Sprite/Wall of stop.png
+  artifactKey: Guid(4528b86b527ec9044b3089feea225729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Wall of stop.png using Guid(4528b86b527ec9044b3089feea225729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aba63ad17162b12600b22f5244e5503') in 0.058555 seconds
+  Import took 0.068646 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001218 seconds.
+  path: Assets/Sprite/Wall of stop.png
+  artifactKey: Guid(4528b86b527ec9044b3089feea225729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Wall of stop.png using Guid(4528b86b527ec9044b3089feea225729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aba63ad17162b12600b22f5244e5503') in 0.010895 seconds
+  Import took 0.014029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.967975 seconds.
+  path: Assets/Sprite/Wall.png
+  artifactKey: Guid(0e5c1ae977dad9c4bb7fd31df0e0322c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Wall.png using Guid(0e5c1ae977dad9c4bb7fd31df0e0322c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a4d75ec6a20ac0eb70c2a11c14b9483') in 0.053695 seconds
+  Import took 0.073256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 169.575669 seconds.
+  path: Assets/Scenes/GameScene.unity
+  artifactKey: Guid(fc4b7d77749c5c84bbdfd0dc1dc3a8ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameScene.unity using Guid(fc4b7d77749c5c84bbdfd0dc1dc3a8ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ed4f76ea430da88b7306233ad7f5ef3') in 0.002832 seconds
+  Import took 0.006247 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
