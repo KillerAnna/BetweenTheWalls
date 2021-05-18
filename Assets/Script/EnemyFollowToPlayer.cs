@@ -24,18 +24,19 @@ public class EnemyFollowToPlayer : MonoBehaviour
     public bool allowDiagonal, dontCrossCorner;
     private Transform EnemyTR;
     private Transform PlayerTR;
-    public GameObject Player;
+    private GameObject Player;
 
     int sizeX, sizeY;
     Node[,] NodeArray;
     Node StartNode, TargetNode, CurNode;
     List<Node> OpenList, ClosedList;
 
-    private void Awake()
+    private void Start()
     {
+        Player = PlayerMove.Instance.gameObject;
         PlayerTR = Player.GetComponent<Transform>();
         EnemyTR = GetComponent<Transform>();
-    }
+    }    
 
     private void Update()
     {
@@ -54,6 +55,7 @@ public class EnemyFollowToPlayer : MonoBehaviour
 
             Vector2 FinalNodePos = new Vector2(FinalNodeList[1].x, FinalNodeList[1].y);
             EnemyTR.position = Vector2.MoveTowards(EnemyTR.position, FinalNodePos, 5.0f * Time.deltaTime);
+            EnemyTR.rotation = Quaternion.identity;
 
             if ((Vector2)EnemyTR.position == FinalNodePos) FinalNodeList.RemoveAt(0);
         }
