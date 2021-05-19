@@ -4,23 +4,12 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public static PlayerMove Instance;
-
     private Rigidbody2D Player;
     public float Speed = 5.0f;
 
     private void Awake()
     {
         Player = GetComponent<Rigidbody2D>();
-
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void Update()
