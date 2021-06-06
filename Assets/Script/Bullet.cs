@@ -16,6 +16,10 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.down * speed * Time.deltaTime);
+        
+        foreach(Collider2D col in Physics2D.OverlapCircleAll(transform.position, 0.0001f))
+            if (col.gameObject.layer == LayerMask.NameToLayer("Wall"))
+                Destroy(gameObject);
     }
 
     IEnumerator DestroyBullet()
@@ -24,14 +28,12 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerEeter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Enemy")
+        if(collider.gameObject.tag == "Wall")
         {
-            Debug.Log("W");
-            collider.gameObject.SendMessage("Hit", 1);
+            Debug.Log("Hit!");
             Destroy(gameObject);
         }
     }
-
 }
