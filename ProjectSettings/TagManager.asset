@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - Item_Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Floor_Spawn
   - Water
   - UI
   - Wall
