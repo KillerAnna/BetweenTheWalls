@@ -53,7 +53,7 @@ public class EnemyFollowToPlayer : MonoBehaviour
             if (FinalNodeList.Count == 1) return;
 
             Vector2 FinalNodePos = new Vector2(FinalNodeList[1].x, FinalNodeList[1].y);
-            EnemyTR.position = Vector2.MoveTowards(EnemyTR.position, FinalNodePos, 5.0f * Time.deltaTime);
+            EnemyTR.position = Vector2.MoveTowards(EnemyTR.position, FinalNodePos, 2.5f * Time.deltaTime);
 
             if ((Vector2)EnemyTR.position == FinalNodePos) FinalNodeList.RemoveAt(0);
         }

@@ -61,8 +61,10 @@
     <Compile Include="Assets\Script\right_arm_Move.cs" />
     <Compile Include="Assets\Script\PlayerMove.cs" />
     <Compile Include="Assets\Script\arm_Move.cs" />
-    <Compile Include="Assets\Script\left_arm_Move.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
+    <Compile Include="Assets\Script\left_arm_Move.cs" />
+    <Compile Include="Assets\Script\Item\Item_Bullet.cs" />
+    <Compile Include="Assets\Script\Item\Item_Spawn.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
