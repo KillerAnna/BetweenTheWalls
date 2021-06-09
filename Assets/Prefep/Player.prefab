@@ -100,6 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 696cde6657080d749a5dc011a3a893e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 1934692953096467577, guid: e5850f8515a70364da26fcd371722446, type: 3}
+  cooltime: 0.1
+  z: 0
+  pos_right: {fileID: 9209800927405940992}
+  pos_left: {fileID: 9209800927252235295}
+  Bullet: 0
   Mouse: {x: 0, y: 0}
   Speed: 5
 --- !u!50 &9209800926570373820
@@ -274,7 +280,7 @@ GameObject:
   - component: {fileID: 9209800927182100818}
   - component: {fileID: 9209800927182100821}
   m_Layer: 0
-  m_Name: Player's_right_arm
+  m_Name: Player's_left_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,9 +364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd3677d3387831479b9cc00b5abae0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1934692953096467577, guid: e5850f8515a70364da26fcd371722446, type: 3}
-  pos: {fileID: 9209800927252235295}
-  cooltime: 0.1
   Mouse: {x: 0, y: 0}
   z: 0
 --- !u!1 &9209800927403094240
@@ -375,7 +378,7 @@ GameObject:
   - component: {fileID: 9209800927403094255}
   - component: {fileID: 9209800927403094254}
   m_Layer: 0
-  m_Name: Player's_left_arm
+  m_Name: Player's_right_arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -459,9 +462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719a63e769ddf9e40bbf4818a4095d46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1934692953096467577, guid: e5850f8515a70364da26fcd371722446, type: 3}
-  pos: {fileID: 9209800927405940992}
-  cooltime: 0.1
   Mouse: {x: 0, y: 0}
   z: 0
 --- !u!1 &9209800927735234791

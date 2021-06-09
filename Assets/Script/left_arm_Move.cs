@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class left_arm_Move : MonoBehaviour
 {
-    public GameObject bullet;
-    public Transform pos;
-    public float cooltime;
-    private float curtime;
     SpriteRenderer rend;
     public Vector2 Mouse;
     public float z;
     // Start is called before the first frame update
     void Start()
     {
+        
         rend = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         Color c = rend.material.color;
         Mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         z = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg;
@@ -29,15 +27,6 @@ public class left_arm_Move : MonoBehaviour
             rend.flipX = true;
             c.a = 1;
             rend.material.color = c;
-            if (curtime <= 0)
-            {
-                if (Input.GetMouseButton(0))
-                {
-                    Instantiate(bullet, pos.position, transform.localRotation);
-                }
-                curtime = cooltime;
-            }
-            curtime -= Time.deltaTime;
         }
         else
         {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public int bullet;
     public float speed;
 
     // Start is called before the first frame update
@@ -36,4 +37,5 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

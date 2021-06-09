@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class right_arm_Move : MonoBehaviour
 {
-    public GameObject bullet;
-    public Transform pos;
-    public float cooltime;
-    private float curtime;
     SpriteRenderer rend;
     public Vector2 Mouse;
     public float z;
@@ -35,15 +31,6 @@ public class right_arm_Move : MonoBehaviour
             rend.flipX = false;
             c.a = 1;
             rend.material.color = c;
-            if (curtime <= 0)
-            {
-                if (Input.GetMouseButton(0))
-                {
-                    Instantiate(bullet, pos.position, transform.localRotation);
-                }
-                curtime = cooltime;
-            }
-            curtime -= Time.deltaTime;
         }
     }
 }

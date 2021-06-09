@@ -11697,9 +11697,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9209800926570373821, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
+      propertyPath: G_bullet
+      value: 
+      objectReference: {fileID: 1934692953096467577, guid: e5850f8515a70364da26fcd371722446, type: 3}
     - target: {fileID: 9209800926570373823, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209800927182100823, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
+      propertyPath: m_Name
+      value: Player's_right_arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209800927403094240, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
+      propertyPath: m_Name
+      value: Player's_left_arm
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
