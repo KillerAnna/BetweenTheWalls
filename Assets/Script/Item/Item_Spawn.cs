@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Item_Spawn : MonoBehaviour // 총알 아이템 생성
 {
-    [SerializeField]
+    [SerializeField] // 변수 유니티에 보이기
     private GameObject Item_BulletPrefab; // 총알 아이템 프리팹
     private bool continue_spawn = false; // 다시 생성 조건
 
-    private void Awake()
+    private void Awake() // 게임 시작할 때 한번 실행
     {
         for (int i = 0; i < 5; i++) // 5번 생성
         {
-            continue_spawn = false;
+            continue_spawn = false; // 다시 생성 조건 초기화
             int x = Random.Range(-13, 13); // 생성 x 좌표
             int y = Random.Range(-13, 13); // 생성 y 좌표
 

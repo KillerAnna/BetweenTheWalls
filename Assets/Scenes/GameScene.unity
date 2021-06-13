@@ -9873,6 +9873,7 @@ GameObject:
   - component: {fileID: 1674163184}
   - component: {fileID: 1674163183}
   - component: {fileID: 1674163185}
+  - component: {fileID: 1674163186}
   m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
@@ -11740,6 +11741,19 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &1674163186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674163181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcaaa77b71575d4bba462cea9ee08ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 0}
 --- !u!1001 &9209800926008360550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11823,6 +11837,18 @@ PrefabInstance:
       propertyPath: pos_right
       value: 
       objectReference: {fileID: 256125268}
+    - target: {fileID: 9209800926570373821, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
+      propertyPath: whatisGround.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209800926570373821, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
+      propertyPath: DestroyPoint.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209800926570373821, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
+      propertyPath: DestroyPoint.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9209800926570373823, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
       propertyPath: m_IsTrigger
       value: 0
