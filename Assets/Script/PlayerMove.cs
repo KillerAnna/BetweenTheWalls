@@ -24,6 +24,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Update()
     {
+        
         Mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         z = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, z + 90);
@@ -31,33 +32,33 @@ public class PlayerMove : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
         if(bullet > 0)
         {
-            if (Mouse.x <= 0)
+            if (curtime >= cooltime)
             {
-                if (curtime <= 0)
+                if (Mouse.x <= 0)
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        GameObject obj = Instantiate(G_bullet);
+                        obj.transform.position = pos_left.transform.position;
+                        bullet -= 1;
+                        curtime = 0;
+                    }
+                }
+                else
                 {
                     if (Input.GetMouseButton(0))
                     {
-                        Instantiate(G_bullet, pos_left.position, transform.localRotation);
+                        GameObject obj = Instantiate(G_bullet);
+                        obj.transform.position = pos_right.transform.position;
                         bullet -= 1;
+                        curtime = 0;
                     }
-                    curtime = cooltime;
                 }
-                curtime -= Time.deltaTime;
             }
-            else
-            {
-                if (curtime <= 0)
-                {
-                    if (Input.GetMouseButton(0))
-                    {
-                        Instantiate(G_bullet, pos_right.position, transform.localRotation);
-                        bullet -= 1;
-                    }
-                    curtime = cooltime;
-                }
-                curtime -= Time.deltaTime;
-            }
+            curtime += Time.deltaTime;
         }
+        
+    
         
 
         Player.velocity = new Vector2(x, y).normalized * Speed;
@@ -77,3 +78,4 @@ public class PlayerMove : MonoBehaviour
         }
     }
 }
+

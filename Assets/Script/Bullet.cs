@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public Vector2 Mouse;
+    public float z;
     public int bullet;
     public float speed;
 
     // Start is called before the first frame update
     private void Start()
     {
+        Mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        z = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, z + 90);
         StartCoroutine(DestroyBullet());
     }
 
@@ -23,19 +28,12 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
     }
 
-    IEnumerator DestroyBullet()
-    {
-        yield return new WaitForSeconds(3);
-        Destroy(gameObject);
-    }
+   IEnumerator DestroyBullet()
+   {
+       yield return new WaitForSeconds(3);
+       Destroy(gameObject);
+   }
 
-    private void OnTriggerEeter2D(Collider2D collider)
-    {
-        if(collider.gameObject.tag == "Wall")
-        {
-            Debug.Log("Hit!");
-            Destroy(gameObject);
-        }
-    }
+
 
 }
