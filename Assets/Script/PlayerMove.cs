@@ -15,6 +15,7 @@ public class PlayerMove : MonoBehaviour
     SpriteRenderer rend;
     private Rigidbody2D Player;
     public float Speed = 5.0f;
+    public LayerMask whatisGround;
 
     private void Awake()
     {
@@ -29,36 +30,40 @@ public class PlayerMove : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, z + 90);
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
-        if(bullet > 0)
+        if (bullet > 0)
         {
-            if (Mouse.x <= 0)
+            if (curtime >= cooltime)
             {
-                if (curtime <= 0)
+                if (Mouse.x <= 0)
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        GameObject obj = Instantiate(G_bullet);
+                        obj.transform.position = pos_left.transform.position;
+                        bullet -= 1;
+                        curtime = 0;
+                    }
+                }
+                else
                 {
                     if (Input.GetMouseButton(0))
                     {
-                        Instantiate(G_bullet, pos_left.position, transform.localRotation);
+                        GameObject obj = Instantiate(G_bullet);
+                        obj.transform.position = pos_right.transform.position;
                         bullet -= 1;
+                        curtime = 0;
                     }
-                    curtime = cooltime;
                 }
-                curtime -= Time.deltaTime;
             }
-            else
-            {
-                if (curtime <= 0)
-                {
-                    if (Input.GetMouseButton(0))
-                    {
-                        Instantiate(G_bullet, pos_right.position, transform.localRotation);
-                        bullet -= 1;
-                    }
-                    curtime = cooltime;
-                }
-                curtime -= Time.deltaTime;
-            }
+            curtime += Time.deltaTime;
         }
-        
+        if (Input.GetKeyDown(KeyCode.LeftShift)) // 대쉬키를 입력했다면
+        {
+            Destroy_Wall(x, y); // 벽 파괴 함수 호출
+        }
+
+
+
 
         Player.velocity = new Vector2(x, y).normalized * Speed;
         transform.rotation = Quaternion.identity;
@@ -76,4 +81,15 @@ public class PlayerMove : MonoBehaviour
             bullet += 5;
         }
     }
+
+    public void Destroy_Wall(float x, float y) // 벽 파괴 함수
+    {
+        Vector2 Destroy_Position = new Vector2(transform.position.x + x, transform.position.y + y); // 현재 대쉬하려는 방향 한칸 앞의 좌표
+        Collider2D overCollider2d = Physics2D.OverlapCircle(Destroy_Position, 0.01f, whatisGround); // 그 좌표에 벽이 있는지 확인
+        if (overCollider2d != null) // 
+        {
+            overCollider2d.transform.GetComponent<Bricks>().MakeDot(Destroy_Position); // 벽이 있으면 파괴
+        }
+    }
 }
+

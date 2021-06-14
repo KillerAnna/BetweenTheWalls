@@ -39,12 +39,12 @@ public class EnemyFollowToPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (targetPos != Vector2Int.RoundToInt(PlayerTR.position))
+        if (targetPos != Vector2Int.RoundToInt(PlayerTR.position)) // 
         {
             startPos = Vector2Int.RoundToInt(EnemyTR.position);
             targetPos = Vector2Int.RoundToInt(PlayerTR.position);
 
-            PathFinding();
+            PathFinding(); // A* 알고리즘 함수 호출
         }
 
         if (FinalNodeList.Count != 0)
