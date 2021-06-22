@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector2.down * speed * Time.deltaTime);
         
         foreach(Collider2D col in Physics2D.OverlapCircleAll(transform.position, 0.0001f))
-            if (col.gameObject.layer == LayerMask.NameToLayer("Wall"))
+            if (col.gameObject.layer == LayerMask.NameToLayer("Wall") || col.gameObject.layer == LayerMask.NameToLayer("WallOutside"))
                 Destroy(gameObject);
     }
 

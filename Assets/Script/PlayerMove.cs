@@ -62,9 +62,6 @@ public class PlayerMove : MonoBehaviour
             Destroy_Wall(x, y); // 벽 파괴 함수 호출
         }
 
-
-
-
         Player.velocity = new Vector2(x, y).normalized * Speed;
         transform.rotation = Quaternion.identity;
 
@@ -84,11 +81,29 @@ public class PlayerMove : MonoBehaviour
 
     public void Destroy_Wall(float x, float y) // 벽 파괴 함수
     {
-        Vector2 Destroy_Position = new Vector2(transform.position.x + x, transform.position.y + y); // 현재 대쉬하려는 방향 한칸 앞의 좌표
-        Collider2D overCollider2d = Physics2D.OverlapCircle(Destroy_Position, 0.01f, whatisGround); // 그 좌표에 벽이 있는지 확인
-        if (overCollider2d != null) // 
+        if (x == 0) // 상하 이동
         {
-            overCollider2d.transform.GetComponent<Bricks>().MakeDot(Destroy_Position); // 벽이 있으면 파괴
+            Vector2 Destroy_Position = new Vector2(transform.position.x, transform.position.y + (y * 0.5f)); // 현재 밀려고하는 방향 한칸 앞의 좌표
+            Collider2D overCollider2d = Physics2D.OverlapCircle(Destroy_Position, 0.01f, whatisGround); // 그 좌표에 벽이 있는지 확인
+
+            Collider2D overCollider2d_front = Physics2D.OverlapCircle(new Vector2(Destroy_Position.x, Destroy_Position.y + y), 0.01f, whatisGround); // 그 좌표 한칸 앞에 벽이 있는지 확인
+
+            if (overCollider2d != null && overCollider2d_front == null && overCollider2d.gameObject.layer != LayerMask.NameToLayer("WallOutside")) // 벽이 없지않고, 한칸 더 앞에 벽이 없고, 밀려는 벽이 사이드 벽이 아니라면
+            {
+                overCollider2d.transform.GetComponent<Bricks>().PullWall(Destroy_Position, x, y); // 벽이 있으면 밀기
+            }
+        }
+        else if (y == 0) // 좌우 이동
+        {
+            Vector2 Destroy_Position = new Vector2(transform.position.x + (x * 0.5f), transform.position.y); // 현재 밀려고하는 방향 한칸 앞의 좌표
+            Collider2D overCollider2d = Physics2D.OverlapCircle(Destroy_Position, 0.01f, whatisGround); // 그 좌표에 벽이 있는지 확인
+
+            Collider2D overCollider2d_front = Physics2D.OverlapCircle(new Vector2(Destroy_Position.x + x, Destroy_Position.y), 0.01f, whatisGround); // 그 좌표 한칸 앞에 벽이 있는지 확인
+
+            if (overCollider2d != null && overCollider2d_front == null && overCollider2d.gameObject.layer != LayerMask.NameToLayer("WallOutside")) // 벽이 없지않고, 한칸 더 앞에 벽이 없고, 밀려는 벽이 사이드 벽이 아니라면
+            {
+                overCollider2d.transform.GetComponent<Bricks>().PullWall(Destroy_Position, x, y); // 벽이 있으면 밀기
+            }
         }
     }
 }
