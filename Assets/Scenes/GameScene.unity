@@ -12033,6 +12033,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9209800926570373821, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
+      propertyPath: bullet
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209800926570373821, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
       propertyPath: G_bullet
       value: 
       objectReference: {fileID: 6592954995209395050, guid: 11b095f3114923b408ded16765678ead, type: 3}
