@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9209800926570373821}
   - component: {fileID: 9209800926570373820}
   - component: {fileID: 9209800926570373823}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,6 +108,9 @@ MonoBehaviour:
   bullet: 50
   Mouse: {x: 0, y: 0}
   Speed: 5
+  whatisGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!50 &9209800926570373820
 Rigidbody2D:
   serializedVersion: 4

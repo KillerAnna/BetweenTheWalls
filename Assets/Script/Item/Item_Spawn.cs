@@ -21,7 +21,7 @@ public class Item_Spawn : MonoBehaviour // 총알 아이템 생성
 
             foreach (Collider2D col in Physics2D.OverlapCircleAll(new Vector2(x, y), 0.4f)) // 총알 아이템 생성위치의 Collider 가져오기
             {
-                if (col.gameObject.layer == LayerMask.NameToLayer("Wall")) // 총알 아이템 생성 위치가 벽이라면
+                if (col.gameObject.layer == LayerMask.NameToLayer("Wall") || col.gameObject.layer == LayerMask.NameToLayer("BrokenWall")) // 총알 아이템 생성 위치가 벽이라면
                     continue_spawn = true; // 다시 생성
 
                 else if (col.gameObject.layer == LayerMask.NameToLayer("Floor_Spawn")) // 총알 아이템 생성 위치가 몬스터스폰 이라면

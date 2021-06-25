@@ -56,19 +56,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\EnemyFollowToPlayer.cs" />
+    <Compile Include="Assets\Script\Enemy\Skeleton.cs" />
     <Compile Include="Assets\Script\player_attack.cs" />
     <Compile Include="Assets\Script\right_arm_Move.cs" />
     <Compile Include="Assets\Script\Item\Item_Spawn.cs" />
     <Compile Include="Assets\Script\Item\Item_Bullet.cs" />
     <Compile Include="Assets\Script\PlayerMove.cs" />
+    <Compile Include="Assets\Script\Wall\Wall.cs" />
     <Compile Include="Assets\Script\arm_Move.cs" />
+    <Compile Include="Assets\Script\Wall\BrokenWall.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\left_arm_Move.cs" />
     <Compile Include="Assets\Script\Right_Fire.cs" />
     <Compile Include="Assets\Script\Left_Fire.cs" />
-    <Compile Include="Assets\Script\Wall\BrokenWall.cs" />
-    <Compile Include="Assets\Script\Wall\Wall.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

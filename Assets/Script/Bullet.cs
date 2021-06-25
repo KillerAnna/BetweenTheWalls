@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     public Vector2 Mouse;
     public float z;
     public float speed;
-    BrokenWall brokenwall;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -15,8 +15,6 @@ public class Bullet : MonoBehaviour
         z = Mathf.Atan2(Mouse.y, Mouse.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, z + 90);
         StartCoroutine(DestroyBullet());
-
-        brokenwall = new BrokenWall();
     }
 
     // Update is called once per frame
@@ -49,7 +47,4 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
     }
-
-
-
 }
