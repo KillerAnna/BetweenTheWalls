@@ -108,7 +108,7 @@ MonoBehaviour:
   Map_Wall: {fileID: 0}
   tilemap: {fileID: 0}
   _wall: {fileID: 11400000, guid: c6eafd2556c0ecc47b6b5708908586ef, type: 2}
-  SKel_Speed: 2.5
+  SKel_Speed: 4
 --- !u!50 &4386321494127457856
 Rigidbody2D:
   serializedVersion: 4

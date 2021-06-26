@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 95055149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 992066366}
   m_RootOrder: 0
@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 217, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &95055151
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 23b1956f42329bb41ae843d71fc8dc4e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a4f73099daf25ce498d0c440a4e20d53, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -254,6 +254,10 @@ PrefabInstance:
     - target: {fileID: 758147345643603906, guid: f94132fb4d3a90449ab769272a2092dd, type: 3}
       propertyPath: m_Name
       value: Skeleton
+      objectReference: {fileID: 0}
+    - target: {fileID: 758147345643603907, guid: f94132fb4d3a90449ab769272a2092dd, type: 3}
+      propertyPath: SKel_Speed
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 758147345643603917, guid: f94132fb4d3a90449ab769272a2092dd, type: 3}
       propertyPath: m_RootOrder
@@ -10595,6 +10599,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 3, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 4, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 5, y: -5, z: 0}
     second:
       serializedVersion: 2
@@ -11737,13 +11761,13 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 172
+  - m_RefCount: 174
     m_Data: {fileID: 11400000, guid: c6eafd2556c0ecc47b6b5708908586ef, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 172
+  - m_RefCount: 174
     m_Data: {fileID: 21300000, guid: 673a973cdc435b243aa27226ff437d1b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 172
+  - m_RefCount: 174
     m_Data:
       e00: 1
       e01: 0
@@ -11762,7 +11786,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 172
+  - m_RefCount: 174
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -12029,11 +12053,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4102719702233954381, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4102719702233954381, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4102719702233954381, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12085,7 +12109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9209800926570373821, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
       propertyPath: bullet
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9209800926570373821, guid: cd86edf79fa2b044ca4d0fd6a4a42e8d, type: 3}
       propertyPath: G_bullet
