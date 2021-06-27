@@ -22,21 +22,21 @@ public class Bullet : MonoBehaviour
     {
         transform.Translate(Vector2.down * speed * Time.deltaTime);
 
-        foreach (Collider2D col in Physics2D.OverlapCircleAll(transform.position, -0.0001f))
+        foreach (Collider2D col in Physics2D.OverlapCircleAll(transform.position, -0.0001f)) // 총알 위치에 뭐가 있는지 검사
         {
-            if (col.gameObject.layer == LayerMask.NameToLayer("Wall"))
+            if (col.gameObject.layer == LayerMask.NameToLayer("Wall")) // 총알이 검사한 곳에 Wall 레이어를 가진 collider가 있다면
             {
-                col.transform.GetComponent<Wall>().Destroywall(transform.position);
-                Destroy(gameObject);
+                col.transform.GetComponent<Wall>().Destroywall(transform.position); // Wall 파괴
+                Destroy(gameObject); // 총알 파괴
             }
-            else if (col.gameObject.layer == LayerMask.NameToLayer("BrokenWall"))
+            else if (col.gameObject.layer == LayerMask.NameToLayer("BrokenWall")) // 총알이 검사한 곳에 BrokenWall 레이어를 가진 collider가 있다면
             {
-                col.transform.GetComponent<BrokenWall>().DestroyBrokenwall(transform.position);
-                Destroy(gameObject);
+                col.transform.GetComponent<BrokenWall>().DestroyBrokenwall(transform.position); // BrokenWall 파괴
+                Destroy(gameObject); // 총알 파괴
             }
-            else if (col.gameObject.layer == LayerMask.NameToLayer("WallOutside"))
+            else if (col.gameObject.layer == LayerMask.NameToLayer("WallOutside")) // 총알이 검사한 곳에 WallOutside 레이어를 가진 collider가 있다면
             {
-                Destroy(gameObject);
+                Destroy(gameObject); // 총알 파괴
             }
         }
 

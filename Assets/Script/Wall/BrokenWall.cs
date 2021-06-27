@@ -6,14 +6,14 @@ using UnityEngine.Tilemaps;
 public class BrokenWall : MonoBehaviour
 {
     public Tilemap tilemap; // 이 스크립트가 포함된 타일맵
-    public Tile Brokenwall; // 일반 벽
+    public Tile Brokenwall; // 갈라진 벽
 
-    private void Start() // Start 함수
+    private void Start()
     {
         tilemap = GetComponent<Tilemap>(); // 타일맵 컴포넌트 가져오기
     }
 
-    public void PullBrokenwall(Vector3 Pos, float x, float y) // 벽 밀기 함수
+    public void PushBrokenwall(Vector3 Pos, float x, float y) // 벽 밀기 함수
     {
         Vector3Int cellPosition = tilemap.WorldToCell(Pos); // 포지션을 셀 포지션 ?? 여긴 잘 모르겠음
 

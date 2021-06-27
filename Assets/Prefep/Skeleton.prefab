@@ -105,10 +105,14 @@ MonoBehaviour:
   allowDiagonal: 1
   dontCrossCorner: 1
   Player: {fileID: 0}
+  imageActivation: {fileID: 0}
+  layer:
+    serializedVersion: 2
+    m_Bits: 448
   Map_Wall: {fileID: 0}
   tilemap: {fileID: 0}
   _wall: {fileID: 11400000, guid: c6eafd2556c0ecc47b6b5708908586ef, type: 2}
-  SKel_Speed: 4
+  SKel_Speed: 8
 --- !u!50 &4386321494127457856
 Rigidbody2D:
   serializedVersion: 4
@@ -140,7 +144,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

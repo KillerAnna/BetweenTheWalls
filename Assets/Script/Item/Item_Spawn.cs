@@ -7,9 +7,9 @@ public class Item_Spawn : MonoBehaviour // 총알 아이템 생성
     [SerializeField] // 변수 유니티에 보이기
     private GameObject  Item_BulletPrefab;      // 총알 아이템 프리팹
     private bool        continue_spawn = false; // 다시 생성 조건
-    public  bool        isSpawn = false;        // 일정 시간 후 재생성 여부
     private int         SpawnCount = 5;         // 현재 총알 아이템 스폰 개수    
     private float       Spawndelaytime = 10f;   // 총알 아이템 재생성 시간   
+    public bool         isSpawn = false;        // 일정 시간 후 재생성 여부
 
     private void Update() // 게임 시작할 때 한번 실행
     {
