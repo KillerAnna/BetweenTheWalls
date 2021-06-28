@@ -24,7 +24,7 @@ public class Skeleton : MonoBehaviour // Skeleton 관련 스크립트
     public bool             allowDiagonal, dontCrossCorner;            // 대각선 허용, 코너를 뚫을지 말지
     private Transform       SkeletonTR;                                // Skeleton Transform
     private Transform       PlayerTR;                                  // Player Transform
-    public GameObject       Player;                                    // Player 게임오브젝트
+    private GameObject       Player;                                    // Player 게임오브젝트
 
     public ImageActivation  imageActivation; // ImageActivation 클래스 참조용
     public LayerMask        layer;           // Skeleton이 이동하면서 확인할 레이어
