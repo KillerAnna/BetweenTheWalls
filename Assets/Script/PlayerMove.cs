@@ -15,13 +15,14 @@ public class PlayerMove : MonoBehaviour
     SpriteRenderer rend;
     private Rigidbody2D Player;
     public float Speed = 5.0f;
-
+    Animator anim;
     public LayerMask whatisGround; // 체크할 레이어 목록
 
     private void Awake()
     {
         Player = GetComponent<Rigidbody2D>();
         rend = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -31,6 +32,14 @@ public class PlayerMove : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, z + 90);
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+
+        if (Player.velocity.normalized.x == 0 && Player.velocity.normalized.y == 0)
+            anim.SetBool("is_walk", false);
+        else
+            anim.SetBool("is_walk", true);
+        
+
+
         if (bullet > 0)
         {
             if (curtime >= cooltime)

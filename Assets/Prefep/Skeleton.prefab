@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 758147345643603907}
   - component: {fileID: 4386321494127457856}
   - component: {fileID: -2606107120670577707}
+  - component: {fileID: 1038721290}
   m_Layer: 10
   m_Name: Skeleton
   m_TagString: Untagged
@@ -104,7 +105,6 @@ MonoBehaviour:
   FinalNodeList: []
   allowDiagonal: 1
   dontCrossCorner: 1
-  Player: {fileID: 0}
   imageActivation: {fileID: 0}
   layer:
     serializedVersion: 2
@@ -160,3 +160,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.59375, y: 0.65625}
   m_EdgeRadius: 0
+--- !u!95 &1038721290
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758147345643603906}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bcab94959e2134d4288ac2d83d36ae45, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

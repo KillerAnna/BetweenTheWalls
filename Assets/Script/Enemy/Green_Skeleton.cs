@@ -5,6 +5,9 @@ using UnityEngine.Tilemaps;
 
 public class Green_Skeleton : MonoBehaviour
 {
+    Animator anim;
+    private Rigidbody2D player;
+
     public ImageActivation _imageActivation; // ImageActivation 클래스 참조용
 
     public GameObject[] Map_Wall; // Wall 타일 그릴 게임오브젝트
@@ -22,6 +25,8 @@ public class Green_Skeleton : MonoBehaviour
 
     private void Start()
     {
+        player = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         Map_Wall = new GameObject[2];
 
         Player = GameObject.Find("Player");
@@ -37,6 +42,10 @@ public class Green_Skeleton : MonoBehaviour
 
     private void Update()
     {
+        if (player.velocity.normalized.x == 0 && player.velocity.normalized.y == 0)
+            anim.SetBool("is_walk", false);
+        else
+            anim.SetBool("is_walk", true);
         targetPos_G = Vector2Int.RoundToInt(PlayerTR.position);
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos_G, GSkel_Speed * Time.deltaTime); // FinalNodePos의 위치로 Skeleton 이동      

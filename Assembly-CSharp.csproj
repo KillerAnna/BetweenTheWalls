@@ -64,13 +64,14 @@
     <Compile Include="Assets\Script\PlayerMove.cs" />
     <Compile Include="Assets\Script\UI\ImageActivation.cs" />
     <Compile Include="Assets\Script\Wall\Wall.cs" />
+    <Compile Include="Assets\Script\Enemy\Green_Skeleton.cs" />
     <Compile Include="Assets\Script\arm_Move.cs" />
     <Compile Include="Assets\Script\Wall\BrokenWall.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\left_arm_Move.cs" />
     <Compile Include="Assets\Script\Right_Fire.cs" />
     <Compile Include="Assets\Script\Left_Fire.cs" />
-    <Compile Include="Assets\Script\Enemy\Green_Skeleton.cs" />
+    <Compile Include="Assets\Script\Spawn_Point.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -19,6 +19,9 @@ public class Node
 
 public class Skeleton : MonoBehaviour // Skeleton 관련 스크립트
 {
+    Animator anim;
+    private Rigidbody2D player;
+
     public Vector2Int       bottomLeft, topRight, startPos, targetPos; // 맵 왼아래 좌표, 맵 오른위 좌표, 현재 좌표, 타겟의 좌표
     public List<Node>       FinalNodeList;                             // 마지막 노드 리스트
     public bool             allowDiagonal, dontCrossCorner;            // 대각선 허용, 코너를 뚫을지 말지
@@ -42,6 +45,8 @@ public class Skeleton : MonoBehaviour // Skeleton 관련 스크립트
 
     private void Awake()
     {
+        player = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         Player = GameObject.Find("Player"); // Player 게임오브젝트 찾기
         Map_Wall = GameObject.Find("Wall"); // Wall 게임오브젝트 찾기
         imageActivation = GameObject.Find("ImageActivation").GetComponent<ImageActivation>(); // ImageActivation 게임오브젝트의 ImageActivation 컴포넌트 가져오기
@@ -53,6 +58,10 @@ public class Skeleton : MonoBehaviour // Skeleton 관련 스크립트
 
     private void Update()
     {
+        if (player.velocity.normalized.x == 0 && player.velocity.normalized.y == 0)
+            anim.SetBool("is_walk", false);
+        else
+            anim.SetBool("is_walk", true);
         if (targetPos != Vector2Int.RoundToInt(PlayerTR.position)) // 타겟 좌표가 Player 좌표랑 같지 않으면
         {
             startPos = Vector2Int.RoundToInt(SkeletonTR.position); // 현재 좌표로 Skeleton 좌표 설정
