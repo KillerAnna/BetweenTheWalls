@@ -8,6 +8,7 @@ public class Spawn_Point : MonoBehaviour
     public Transform[] spawnpoint;
     public GameObject enemy;
     public GameObject enemy1;
+    public float a = 20f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,10 +24,19 @@ public class Spawn_Point : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(10);
-            int x = Random.Range(0, spawnpoint.Length);
-            Instantiate(enemy, spawnpoint[x]);
-            Instantiate(enemy1, spawnpoint[x]);
+            yield return new WaitForSeconds(a);
+            for(int i = 0;i < 4;i++)
+            {
+                int x = Random.Range(0, spawnpoint.Length);
+                Instantiate(enemy, spawnpoint[x]);
+            }
+            
+            for(int j=0;j<2; j++)
+            {
+                int y = Random.Range(0, spawnpoint.Length);
+                Instantiate(enemy1, spawnpoint[y]);
+            }
+            a = 10f;
         }
         
     }

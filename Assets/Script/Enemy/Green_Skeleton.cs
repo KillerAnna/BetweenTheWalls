@@ -7,6 +7,7 @@ public class Green_Skeleton : MonoBehaviour
 {
     Animator anim;
     private Rigidbody2D player;
+    SpriteRenderer rend;
 
     public ImageActivation _imageActivation; // ImageActivation 클래스 참조용
 
@@ -46,9 +47,10 @@ public class Green_Skeleton : MonoBehaviour
             anim.SetBool("is_walk", false);
         else
             anim.SetBool("is_walk", true);
+
         targetPos_G = Vector2Int.RoundToInt(PlayerTR.position);
 
-        transform.position = Vector2.MoveTowards(transform.position, targetPos_G, GSkel_Speed * Time.deltaTime); // FinalNodePos의 위치로 Skeleton 이동      
+        transform.position = Vector2.MoveTowards(transform.position, targetPos_G, GSkel_Speed * Time.deltaTime); // targetPos_G 의 위치로 Skeleton 이동      
 
         if (Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y), 1f, layer)) // Green Skeleton이 자신의 위치에 벽이 있는지 검사
         {
@@ -73,6 +75,12 @@ public class Green_Skeleton : MonoBehaviour
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) // Player랑 Skeleton이랑 닿으면 Gameover
         {
             imageActivation.isActivation = true; // 게임오버 조건 활성화
+        }
+
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Kill_Bullet"))
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject); // 총알 삭제
         }
     }
 }

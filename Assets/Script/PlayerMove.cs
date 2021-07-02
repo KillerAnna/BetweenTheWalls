@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public GameObject G_bullet;
+    public GameObject K_bullet;
     public float cooltime;
     private float curtime;
     public float z;
@@ -46,9 +47,16 @@ public class PlayerMove : MonoBehaviour
             {
                 if (Mouse.x <= 0)
                 {
-                    if (Input.GetMouseButtonDown(0))
+                    if (Input.GetMouseButtonDown(1))
                     {
                         GameObject obj = Instantiate(G_bullet);
+                        obj.transform.position = pos_left.transform.position;
+                        bullet -= 1;
+                        curtime = 0;
+                    }
+                    else if (Input.GetMouseButtonDown(0))
+                    {
+                        GameObject obj = Instantiate(K_bullet);
                         obj.transform.position = pos_left.transform.position;
                         bullet -= 1;
                         curtime = 0;
@@ -56,10 +64,17 @@ public class PlayerMove : MonoBehaviour
                 }
                 else
                 {
-                    if (Input.GetMouseButton(0))
+                    if (Input.GetMouseButton(1))
                     {
                         GameObject obj = Instantiate(G_bullet);
                         obj.transform.position = pos_right.transform.position;
+                        bullet -= 1;
+                        curtime = 0;
+                    }
+                    else if (Input.GetMouseButtonDown(0))
+                    {
+                        GameObject obj = Instantiate(K_bullet);
+                        obj.transform.position = pos_left.transform.position;
                         bullet -= 1;
                         curtime = 0;
                     }

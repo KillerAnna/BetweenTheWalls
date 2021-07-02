@@ -19,6 +19,7 @@ public class Node
 
 public class Skeleton : MonoBehaviour // Skeleton 관련 스크립트
 {
+    SpriteRenderer rend;
     Animator anim;
     private Rigidbody2D player;
 
@@ -99,6 +100,12 @@ public class Skeleton : MonoBehaviour // Skeleton 관련 스크립트
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) // Player랑 Skeleton이랑 닿으면 Gameover
         {
             imageActivation.isActivation = true; // 게임오버 조건 활성화
+        }
+
+        else if(collision.gameObject.layer == LayerMask.NameToLayer("Kill_Bullet"))
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject); // 총알 삭제
         }
     }
 

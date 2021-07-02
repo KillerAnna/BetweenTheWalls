@@ -66,6 +66,7 @@
     <Compile Include="Assets\Script\Wall\Wall.cs" />
     <Compile Include="Assets\Script\Spawn_Point.cs" />
     <Compile Include="Assets\Script\Enemy\Green_Skeleton.cs" />
+    <Compile Include="Assets\Script\GameManager\GameQuit.cs" />
     <Compile Include="Assets\Script\arm_Move.cs" />
     <Compile Include="Assets\Script\Wall\BrokenWall.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
@@ -73,7 +74,7 @@
     <Compile Include="Assets\Script\Right_Fire.cs" />
     <Compile Include="Assets\Script\Left_Fire.cs" />
     <Compile Include="Assets\Script\UI\Text_Count.cs" />
-    <Compile Include="Assets\Script\GameManager\GameQuit.cs" />
+    <Compile Include="Assets\Script\Kill_Bullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
