@@ -49,7 +49,7 @@ public class Skeleton : MonoBehaviour // Skeleton 관련 스크립트
         anim = GetComponent<Animator>();
         Player = GameObject.Find("Player"); // Player 게임오브젝트 찾기
         Map_Wall = GameObject.Find("Wall"); // Wall 게임오브젝트 찾기
-        imageActivation = GameObject.Find("ImageActivation").GetComponent<ImageActivation>(); // ImageActivation 게임오브젝트의 ImageActivation 컴포넌트 가져오기
+        imageActivation = GameObject.Find("ImageManager").GetComponent<ImageActivation>(); // ImageActivation 게임오브젝트의 ImageActivation 컴포넌트 가져오기
 
         PlayerTR = Player.GetComponent<Transform>(); // Player의 Transform 컴포넌트 가져오기
         SkeletonTR = GetComponent<Transform>(); // Skeleton의 Transform 컴포넌트 가져오기

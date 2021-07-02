@@ -5,13 +5,19 @@ using UnityEngine.UI;
 
 public class ImageActivation : MonoBehaviour
 {
+    public GameObject Obj_Exit; // Exit 버튼 오브젝트
+
+    public Image Bullet;      // Bullet 이미지
+    public Image GameOver;    // GameOver 이미지
+    public Image Exit;        // Exit 이미지
+
     public bool  isActivation = false; // 게임오버 조건 (기본값 false)
-    public Image Bullet;               // Bullet UI
-    public Image GameOver;             // GameOver UI
-    public Image Exit;                 // Exit UI
 
     private void Start()
     {
+        Obj_Exit = GameObject.Find("Exit"); // Exit 버튼 오브젝트 찾기
+        Obj_Exit.SetActive(false); // Exit 버튼 비활성화
+
         Bullet.fillAmount = 1.0f; // 화면상에 보이게 함
     }
 
@@ -21,18 +27,10 @@ public class ImageActivation : MonoBehaviour
         {
             Time.timeScale = 0; // 게임 일시정지
 
-            GameOver.fillAmount = 1.0f; // 화면상에 보이게 함
-            Exit.fillAmount = 1.0f; // 화면상에 보이게 함
-        }
-    }
+            Obj_Exit.SetActive(true); // Exit 버튼 활성화
 
-    public void Quit() // Exit 버튼이 눌리면 실행할 함수 (게임 종료)
-    {
-        // 게임 종료 스크립트
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit(); // 어플리케이션 종료
-#endif
+            Exit.fillAmount = 1.0f;        // 화면상에 보이게 함
+            GameOver.fillAmount = 1.0f;    // 화면상에 보이게 함
+        }
     }
 }

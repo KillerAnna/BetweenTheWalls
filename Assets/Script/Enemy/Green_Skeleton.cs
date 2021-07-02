@@ -32,7 +32,7 @@ public class Green_Skeleton : MonoBehaviour
         Player = GameObject.Find("Player");
         Map_Wall[0] = GameObject.Find("Wall"); // Wall 게임오브젝트 찾기
         Map_Wall[1] = GameObject.Find("BrokenWall"); // Wall 게임오브젝트 찾기
-        imageActivation = GameObject.Find("ImageActivation").GetComponent<ImageActivation>(); // ImageActivation 게임오브젝트의 ImageActivation 컴포넌트 가져오기
+        imageActivation = GameObject.Find("ImageManager").GetComponent<ImageActivation>(); // ImageActivation 게임오브젝트의 ImageActivation 컴포넌트 가져오기
 
 
         PlayerTR = Player.GetComponent<Transform>();

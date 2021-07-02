@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     public float z;
     public Transform pos_right;
     public Transform pos_left;
-    public int bullet = 50;
+    public int bullet = 5;
     public Vector2 Mouse;
     SpriteRenderer rend;
     private Rigidbody2D Player;
