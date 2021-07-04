@@ -108,7 +108,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 320
-  GSkel_Speed: 2.5
+  GSkel_Speed: 5
 --- !u!61 &7168791305386239543
 BoxCollider2D:
   m_ObjectHideFlags: 0

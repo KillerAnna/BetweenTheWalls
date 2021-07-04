@@ -100,7 +100,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (collider.gameObject.tag == "Item_Bullet")
         {
-            bullet += 5;
+            bullet += 1;
         }
     }
 
