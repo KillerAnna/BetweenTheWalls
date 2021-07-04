@@ -77,10 +77,10 @@ public class Skeleton : MonoBehaviour // Skeleton 관련 스크립트
             if (FinalNodeList.Count == 1) return;
 
             Vector2 FinalNodePos = new Vector2(FinalNodeList[1].x, FinalNodeList[1].y); // FinalNodePos의 좌표를 가져온다
-            if(Physics2D.OverlapCircle(new Vector2(FinalNodePos.x, FinalNodePos.y), 0.4f, layer))
+            if (Physics2D.OverlapCircle(new Vector2(FinalNodePos.x, FinalNodePos.y), 0.4f, layer))
                 PathFinding(); // A* 알고리즘 함수 호출
             else
-                SkeletonTR.position = Vector2.MoveTowards(SkeletonTR.position, FinalNodePos, SKel_Speed * Time.deltaTime); // FinalNodePos의 위치로 Skeleton 이동            
+                SkeletonTR.position = Vector2.MoveTowards(SkeletonTR.position, FinalNodePos, SKel_Speed * Time.deltaTime); // FinalNodePos의 위치로 Skeleton 이동
 
             if ((Vector2)SkeletonTR.position == FinalNodePos) FinalNodeList.RemoveAt(0); // Skeleton이 정했던 위치로 이동했으면 그 좌표 삭제
         }       
@@ -97,15 +97,17 @@ public class Skeleton : MonoBehaviour // Skeleton 관련 스크립트
             Destroy(collision.gameObject); // 총알 삭제
         }
 
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) // Player랑 Skeleton이랑 닿으면 Gameover
-        {
-            imageActivation.isActivation = true; // 게임오버 조건 활성화
-        }
-
         else if(collision.gameObject.layer == LayerMask.NameToLayer("Kill_Bullet"))
         {
             Destroy(gameObject);
             Destroy(collision.gameObject); // 총알 삭제
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player")) // Player랑 Skeleton이랑 닿으면 Gameover
+        {
+            imageActivation.isActivation = true; // 게임오버 조건 활성화
         }
     }
 

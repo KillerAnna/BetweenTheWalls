@@ -11,6 +11,8 @@ public class ImageActivation : MonoBehaviour
     public Image GameOver;    // GameOver 이미지
     public Image Exit;        // Exit 이미지
 
+    public GameObject ElapsedTime;  // ElapsedTime 텍스트
+
     public bool  isActivation = false; // 게임오버 조건 (기본값 false)
 
     private void Start()
@@ -31,6 +33,8 @@ public class ImageActivation : MonoBehaviour
 
             Exit.fillAmount = 1.0f;        // 화면상에 보이게 함
             GameOver.fillAmount = 1.0f;    // 화면상에 보이게 함
+
+            ElapsedTime.transform.position = new Vector2(1920, 560);
         }
     }
 }

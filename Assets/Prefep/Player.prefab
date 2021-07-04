@@ -78,9 +78,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -3910178557780502947, guid: 13df65aa8bf68fb4c829d2244dd86428, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d375d8cd8ab3c0e4f95a4484466df366, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.11, y: 0.22}
@@ -102,14 +102,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   G_bullet: {fileID: 6592954995209395050, guid: 11b095f3114923b408ded16765678ead, type: 3}
-  K_bullet: {fileID: 0}
+  K_bullet: {fileID: 2722612038558238729, guid: 1abe853c4def353439822d7b4f5c2724, type: 3}
   cooltime: 0.3
-  z: 179.54408
+  z: 0
   pos_right: {fileID: 0}
   pos_left: {fileID: 0}
-  bullet: 5
-  Mouse: {x: -5.0710387, y: 0.0403533}
-  Speed: 3
+  bullet: 0
+  Mouse: {x: 0, y: 0}
+  Speed: 4
   whatisGround:
     serializedVersion: 2
     m_Bits: 448
@@ -151,7 +151,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.3125, y: 0.6875}
+    oldSize: {x: 0.34375, y: 0.6875}
     newSize: {x: 0.11, y: 0.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -170,7 +170,7 @@ Animator:
   m_GameObject: {fileID: 1870829956601771087}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a49e51c54db625f44bd1eab7715a350c, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9209800927403094241}
   - component: {fileID: 9209800927403094255}
-  - component: {fileID: 4479963681786400236}
+  - component: {fileID: 829250406}
   m_Layer: 0
   m_Name: Player's_left_arm
   m_TagString: Untagged
@@ -288,7 +288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9209800927403094240}
   m_LocalRotation: {x: -0, y: -0, z: -0.72339815, w: 0.6904311}
-  m_LocalPosition: {x: 0.1, y: 0.07, z: 0}
+  m_LocalPosition: {x: 0.111, y: 0.081, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4102719702233954381}
@@ -313,7 +313,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -333,7 +333,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b9153adde048245458ff72d4327f7226, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -345,7 +345,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4479963681786400236
+--- !u!114 &829250406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,6 +370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player's_right_arm
       objectReference: {fileID: 0}
+    - target: {fileID: 3572169400887813325, guid: 19d344ec1c02f254e823dc4e95244aeb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 8894467327696535664, guid: 19d344ec1c02f254e823dc4e95244aeb, type: 3}
       propertyPath: m_RootOrder
       value: 2
