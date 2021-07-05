@@ -52,13 +52,14 @@ public class Green_Skeleton : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(transform.position, targetPos_G, GSkel_Speed * Time.deltaTime); // targetPos_G 의 위치로 Skeleton 이동      
 
+        /* Green Skeleton 벽 파괴 임시해제
         if (Physics2D.OverlapCircle(new Vector2(transform.position.x, transform.position.y), 1f, layer)) // Green Skeleton이 자신의 위치에 벽이 있는지 검사
         {
             Vector3Int cellPosition = tilemap[0].WorldToCell(transform.position); // 포지션을 셀 포지션 ?? 여긴 잘 모르겠음
 
             tilemap[0].SetTile(cellPosition, null); // 벽 파괴 (임시 방편)
             tilemap[1].SetTile(cellPosition, null); // 벽 파괴 (임시 방편)
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision) // Skeleton이 무언가와 충돌했다면
